@@ -23,5 +23,10 @@ namespace labTaxi
             OmnibusServicio.Agregar((int)nudPasajeros.Value);
             this.Close();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -37,25 +37,34 @@
             // 
             // nudPasajeros
             // 
-            this.nudPasajeros.Location = new System.Drawing.Point(285, 117);
+            this.nudPasajeros.Location = new System.Drawing.Point(287, 112);
+            this.nudPasajeros.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.nudPasajeros.Maximum = new decimal(new int[] {
+            1874919424,
+            2328306,
+            0,
+            0});
             this.nudPasajeros.Name = "nudPasajeros";
-            this.nudPasajeros.Size = new System.Drawing.Size(70, 20);
+            this.nudPasajeros.Size = new System.Drawing.Size(140, 29);
             this.nudPasajeros.TabIndex = 8;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(319, 187);
+            this.btnCancelar.Location = new System.Drawing.Point(325, 200);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(151, 42);
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(187, 187);
+            this.btnGuardar.Location = new System.Drawing.Point(122, 200);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.Size = new System.Drawing.Size(151, 42);
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -64,22 +73,30 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(226, 119);
+            this.label1.Location = new System.Drawing.Point(83, 103);
+            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.Size = new System.Drawing.Size(190, 48);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Pasajeros";
+            this.label1.Text = "Pasajeros del \r\nSiguiente Colectivo";
             // 
             // altaOmnibus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnGuardar;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.CancelButton = this.btnCancelar;
+            this.ClientSize = new System.Drawing.Size(604, 323);
             this.Controls.Add(this.nudPasajeros);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.MaximizeBox = false;
             this.Name = "altaOmnibus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "altaOmnibus";
             ((System.ComponentModel.ISupportInitialize)(this.nudPasajeros)).EndInit();
             this.ResumeLayout(false);
