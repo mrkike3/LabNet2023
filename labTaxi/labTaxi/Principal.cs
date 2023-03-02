@@ -37,8 +37,12 @@ namespace labTaxi
             btnCargarOmnibus.Enabled = true;
 
             btnMostrar.Enabled = false;
+            btnMostrar.BackColor = Color.LightYellow;
+            btnCargarOmnibus.BackColor = Color.DarkOrange;
+            btnCargarTaxi.BackColor = Color.DarkOrange;
 
-            
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -56,6 +60,7 @@ namespace labTaxi
         {
             var fAltaOmnibus = new altaOmnibus();
             fAltaOmnibus.ShowDialog();
+            
         }
     }
 }

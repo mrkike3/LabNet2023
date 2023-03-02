@@ -18,7 +18,7 @@ namespace labTaxi
         {
             TaxiServicio.InicializadorDeListaTaxis();
             OmnibusServicio.InicializadorDeListaOmnibus();
-            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Principal());

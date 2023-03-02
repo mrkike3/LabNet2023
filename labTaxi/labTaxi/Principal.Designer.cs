@@ -61,19 +61,21 @@
             // 
             // btnCargarTaxi
             // 
+            this.btnCargarTaxi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnCargarTaxi.Enabled = false;
             this.btnCargarTaxi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarTaxi.Location = new System.Drawing.Point(599, 393);
+            this.btnCargarTaxi.Location = new System.Drawing.Point(594, 393);
             this.btnCargarTaxi.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCargarTaxi.Name = "btnCargarTaxi";
-            this.btnCargarTaxi.Size = new System.Drawing.Size(139, 32);
+            this.btnCargarTaxi.Size = new System.Drawing.Size(144, 32);
             this.btnCargarTaxi.TabIndex = 2;
             this.btnCargarTaxi.Text = "Agregar Taxis";
-            this.btnCargarTaxi.UseVisualStyleBackColor = true;
+            this.btnCargarTaxi.UseVisualStyleBackColor = false;
             this.btnCargarTaxi.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCargarOmnibus
             // 
+            this.btnCargarOmnibus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnCargarOmnibus.Enabled = false;
             this.btnCargarOmnibus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargarOmnibus.Location = new System.Drawing.Point(140, 393);
@@ -82,19 +84,21 @@
             this.btnCargarOmnibus.Size = new System.Drawing.Size(167, 32);
             this.btnCargarOmnibus.TabIndex = 3;
             this.btnCargarOmnibus.Text = "Agregar Omibus";
-            this.btnCargarOmnibus.UseVisualStyleBackColor = true;
+            this.btnCargarOmnibus.UseVisualStyleBackColor = false;
             this.btnCargarOmnibus.Click += new System.EventHandler(this.btnCargarOmnibus_Click);
             // 
             // btnMostrar
             // 
+            this.btnMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrar.ForeColor = System.Drawing.Color.Black;
             this.btnMostrar.Location = new System.Drawing.Point(366, 37);
             this.btnMostrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(158, 66);
             this.btnMostrar.TabIndex = 4;
             this.btnMostrar.Text = "Cargar Grillas";
-            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // label1
