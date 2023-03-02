@@ -46,14 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="altaOmnibus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="altaOmnibus.Designer.cs">
+      <DependentUpon>altaOmnibus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="altaTaxi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="altaTaxi.Designer.cs">
+      <DependentUpon>altaTaxi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\omnibus\Omnibus.cs" />
+    <Compile Include="Clases\omnibus\OmnibusServicio.cs" />
+    <Compile Include="Clases\Taxi\Taxi.cs" />
+    <Compile Include="Clases\Taxi\TaxiServicio.cs" />
+    <Compile Include="Clases\TransportePublico.cs" />
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="altaOmnibus.resx">
+      <DependentUpon>altaOmnibus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="altaTaxi.resx">
+      <DependentUpon>altaTaxi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,5 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

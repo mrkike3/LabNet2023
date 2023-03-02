@@ -1,4 +1,6 @@
-﻿using System;
+﻿using labTaxi.Clases;
+using labTaxi.Clases.omnibus;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +16,12 @@ namespace labTaxi
         [STAThread]
         static void Main()
         {
+            TaxiServicio.InicializadorDeListaTaxis();
+            OmnibusServicio.InicializadorDeListaOmnibus();
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Principal());
         }
     }
 }
