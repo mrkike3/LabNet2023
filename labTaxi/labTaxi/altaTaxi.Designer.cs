@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.nudPasajeros = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudPasajeros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +86,18 @@
             this.nudPasajeros.Size = new System.Drawing.Size(140, 29);
             this.nudPasajeros.TabIndex = 4;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(311, 93);
+            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(177, 24);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Max Pasajeros (4)";
+            // 
             // altaTaxi
             // 
             this.AcceptButton = this.button1;
@@ -93,6 +106,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(604, 315);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.nudPasajeros);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -116,5 +130,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.NumericUpDown nudPasajeros;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -33,7 +33,7 @@ namespace labTaxi.Clases.omnibus
             if (nroOmnibus > 5)
             {
                 
-                MessageBox.Show("cantidad maxima de Omnibus");
+                MessageBox.Show("Alcanzaste la Cantidad maxima de Omnibus Permitidos (5)");
 
                 
                 return;
@@ -42,7 +42,7 @@ namespace labTaxi.Clases.omnibus
             var omnibus = new Omnibus();
 
 
-            MessageBox.Show(omnibus.Avanzar() + $" con {pasajeros}");
+            MessageBox.Show(omnibus.Avanzar() + $" con {pasajeros} pasajeros");
 
 
             Omnibus nuevoOmnibus = new Omnibus

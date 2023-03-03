@@ -33,7 +33,7 @@ namespace labTaxi.Clases
             if (nroTaxis > 5)
             {
                
-                MessageBox.Show("Cantidad Maxima de Taxis");
+                MessageBox.Show("Alcanzaste la Cantidad Maxima de Taxis Permitidos (5)");
 
 
                 return;
@@ -45,7 +45,7 @@ namespace labTaxi.Clases
             var taxis = new Taxis();
 
 
-            MessageBox.Show(taxis.Avanzar() + $" con {pasajeros}");
+            MessageBox.Show(taxis.Avanzar() + $" con {pasajeros} pasajeros");
 
             Taxis nuevoTaxi = new Taxis
             {
