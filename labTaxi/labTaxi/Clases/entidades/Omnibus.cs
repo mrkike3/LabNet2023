@@ -8,8 +8,6 @@ namespace labTaxi.Clases.omnibus
 {
     public class Omnibus : TransportePublico
     {
-        public int omnibus { get; set; }
-
         public override string Avanzar()
         {
             return "Omnibus avanza";

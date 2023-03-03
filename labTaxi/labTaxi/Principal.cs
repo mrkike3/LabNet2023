@@ -1,5 +1,6 @@
 ﻿using labTaxi.Clases;
 using labTaxi.Clases.omnibus;
+using labTaxi.Clases.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,27 +21,36 @@ namespace labTaxi
         }
 
 
-     
+
         private void btnCargarOmnibus_Click(object sender, EventArgs e)
         {
             var fAltaOmnibus = new altaOmnibus();
             fAltaOmnibus.ShowDialog();
-
-
-
-
-
+            RefreshList();
         }
-
-
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            var omnibus = OmnibusServicio.ObtenerListaOmnibus();
+            RefreshList();
+            FormatearGrilla();
+        }
+
+        private void FormatearGrilla()
+        {
+            dgvOmnibus.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvOmnibus.Columns["Id"].HeaderText = "Bus Nro:";
+
+            dgvTaxi.Columns["Pasajeros"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvTaxi.Columns["Id"].HeaderText = "Taxi Nro:";
+        }
+
+        private void RefreshList()
+        {
+            var omnibus = TransporteServicio.ObtenerTransportes("");
             dgvOmnibus.DataSource = omnibus;
 
-            var taxi = TaxiServicio.ObtenerListaTaxi();
-            dgvTaxi.DataSource = taxi;
+            var taxis = TransporteServicio.ObtenerTransportes("Taxi");
+            dgvTaxi.DataSource = taxis;
         }
 
         private void btnDetenerOmnibuses_Click(object sender, EventArgs e)
@@ -71,7 +81,7 @@ namespace labTaxi
             var fAltaTaxi = new altaTaxi();
 
             fAltaTaxi.ShowDialog();
-
+            RefreshList();
         }
 
         private void btnDetenerTaxis_Click(object sender, EventArgs e)

@@ -4,8 +4,6 @@ namespace labTaxi.Clases
 {
     public class Taxis : TransportePublico
     {
-        public int taxi { get; set; }
-
         public override string Avanzar()
         {
             return "Taxi Avanza";

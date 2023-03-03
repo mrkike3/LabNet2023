@@ -9,18 +9,13 @@ namespace labTaxi.Clases
     
 
     public abstract class TransportePublico
-    { 
-     
-        public int pasajeros { get; set; }
-
-
-
+    {
+        public int Id { get; set; }
+        public int Pasajeros { get; set; }
         public abstract string Avanzar();
-
-
         public abstract string Detenerse();
-       
     }
+
+}
  
     
-}

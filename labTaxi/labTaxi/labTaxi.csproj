@@ -59,10 +59,9 @@
       <DependentUpon>altaTaxi.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\entidades\Omnibus.cs" />
-    <Compile Include="Clases\Servicios\OmnibusServicio.cs" />
     <Compile Include="Clases\entidades\Taxi.cs" />
-    <Compile Include="Clases\Servicios\TaxiServicio.cs" />
     <Compile Include="Clases\entidades\TransportePublico.cs" />
+    <Compile Include="Clases\Servicios\TransporteServicio.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
