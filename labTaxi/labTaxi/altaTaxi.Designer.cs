@@ -84,7 +84,7 @@
             0});
             this.nudPasajeros.Name = "nudPasajeros";
             this.nudPasajeros.Size = new System.Drawing.Size(140, 29);
-            this.nudPasajeros.TabIndex = 4;
+            this.nudPasajeros.TabIndex = 0;
             // 
             // label2
             // 

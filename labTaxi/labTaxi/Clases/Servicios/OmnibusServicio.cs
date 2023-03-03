@@ -7,9 +7,8 @@ namespace labTaxi.Clases.omnibus
     {
 
         private static BindingList<Omnibus> _listaOmnibus;
-        public static int nroOmnibus = 1;
-
-
+        private static int NumeroOmnibus = 1;
+        private const int CantidadMaximaOmnibus = 5;
 
 
         public static void InicializadorDeListaOmnibus()
@@ -28,32 +27,30 @@ namespace labTaxi.Clases.omnibus
 
 
 
-        public static void Agregar(int pasajeros)
+        public static bool Agregar(int pasajeros)
         {
-            if (nroOmnibus > 5)
+            bool CargaFinalizada = false;
+
+            if (NumeroOmnibus > CantidadMaximaOmnibus)
             {
-                
-                MessageBox.Show("Alcanzaste la Cantidad maxima de Omnibus Permitidos (5)");
 
-                
-                return;
+                CargaFinalizada = true;
+                return CargaFinalizada;
+
             }
-
-            var omnibus = new Omnibus();
-
-
-            MessageBox.Show(omnibus.Avanzar() + $" con {pasajeros} pasajeros");
 
 
             Omnibus nuevoOmnibus = new Omnibus
             {
-                omnibus = nroOmnibus,
+                omnibus = NumeroOmnibus,
                 pasajeros = pasajeros,
 
             };
 
             _listaOmnibus.Add(nuevoOmnibus);
-            nroOmnibus++;
+            NumeroOmnibus++;
+
+            return false;
 
         }
     }

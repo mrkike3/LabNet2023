@@ -29,10 +29,17 @@ namespace labTaxi
                 MessageBox.Show("La Cantidad maxima de Pasajeros Permitida es 4");
                 return;
             }
-          
+
+            bool CargaFinalizada = TaxiServicio.Agregar((int)nudPasajeros.Value);
+
+            if (CargaFinalizada == true)
+            {
+                MessageBox.Show("Cantidad Maxima de Taxis Alcanzada (5)");
+                return;
+            }
           
 
-            TaxiServicio.Agregar((int)nudPasajeros.Value);
+            
             this.Close();
 
         }

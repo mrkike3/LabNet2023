@@ -13,13 +13,20 @@ namespace labTaxi
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            
             if (nudPasajeros.Value > 30)
             {
                 MessageBox.Show("La Cantidad maxima de Pasajeros Permitida es 30");
                 return;
             }
-          
-            OmnibusServicio.Agregar((int)nudPasajeros.Value);
+            bool CargaFinalizada = OmnibusServicio.Agregar((int)nudPasajeros.Value);
+
+            if(CargaFinalizada == true)
+            {
+                MessageBox.Show("Carga Maxima de Colectivos Alcanzada (5)");
+                
+            }
+
             this.Close();
         }
 
@@ -27,5 +34,7 @@ namespace labTaxi
         {
             this.Close();
         }
+
+      
     }
 }
