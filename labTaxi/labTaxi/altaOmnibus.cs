@@ -1,12 +1,5 @@
 ﻿using labTaxi.Clases.omnibus;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace labTaxi
@@ -20,6 +13,12 @@ namespace labTaxi
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (nudPasajeros.Value > 30)
+            {
+                MessageBox.Show("La Cantidad maxima de Pasajeros Permitida es 30");
+                return;
+            }
+          
             OmnibusServicio.Agregar((int)nudPasajeros.Value);
             this.Close();
         }

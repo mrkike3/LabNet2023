@@ -10,5 +10,14 @@ namespace labTaxi.Clases.omnibus
     {
         public int omnibus { get; set; }
 
+        public override string Avanzar()
+        {
+            return "Omnibus avanza";
+        }
+
+        public override string Detenerse()
+        {
+            return "Omnibuses detenidos";
+        }
     }
 }

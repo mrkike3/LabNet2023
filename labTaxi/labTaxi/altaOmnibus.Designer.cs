@@ -32,6 +32,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudPasajeros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,8 +41,8 @@
             this.nudPasajeros.Location = new System.Drawing.Point(316, 133);
             this.nudPasajeros.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.nudPasajeros.Maximum = new decimal(new int[] {
-            1874919424,
-            2328306,
+            -727379968,
+            232,
             0,
             0});
             this.nudPasajeros.Name = "nudPasajeros";
@@ -84,6 +85,15 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Pasajeros del \r\nSiguiente Colectivo";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(315, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(188, 24);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Max Pasajeros (30)";
+            // 
             // altaOmnibus
             // 
             this.AcceptButton = this.btnGuardar;
@@ -91,6 +101,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(604, 323);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.nudPasajeros);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
@@ -114,5 +125,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -19,48 +19,69 @@ namespace labTaxi
             InitializeComponent();
         }
 
-      
 
-        private void btnMostrar_Click(object sender, EventArgs e)
+     
+        private void btnCargarOmnibus_Click(object sender, EventArgs e)
         {
+            var fAltaOmnibus = new altaOmnibus();
+            fAltaOmnibus.ShowDialog();
 
-            TaxiServicio.cargarLista();
-            OmnibusServicio.cargarLista();
 
-            var taxis = TaxiServicio.ObtenerListaTaxi();
-            dgvTaxi.DataSource = taxis;
-
-            var omnibus = OmnibusServicio.ObtenerListaOmnibus();
-            dgvOmnibus.DataSource = omnibus;
-
-            btnCargarTaxi.Enabled = true;
-            btnCargarOmnibus.Enabled = true;
-
-            btnMostrar.Enabled = false;
-            btnMostrar.BackColor = Color.LightYellow;
-            btnCargarOmnibus.BackColor = Color.DarkOrange;
-            btnCargarTaxi.BackColor = Color.DarkOrange;
 
 
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            var omnibus = OmnibusServicio.ObtenerListaOmnibus();
+            dgvOmnibus.DataSource = omnibus;
+
+            var taxi = TaxiServicio.ObtenerListaTaxi();
+            dgvTaxi.DataSource = taxi;
+        }
+
+        private void btnDetenerOmnibuses_Click(object sender, EventArgs e)
+        {
+            btnCargarOmnibus.BackColor = Color.Black;
+
+            var omnibus = new Omnibus();
+
+            MessageBox.Show(omnibus.Detenerse());
+
+            btnCargarOmnibus.Enabled = false;
+        }
+
+        private void btnHabilitar_Click(object sender, EventArgs e)
+        {
+            btnCargarOmnibus.Enabled = true;
+            btnCargarOmnibus.BackColor = Color.Gold;
+        }
+
+        private void btnHabilitarTaxis_Click(object sender, EventArgs e)
+        {
+            btnCargarTaxi.Enabled = true;
+            btnCargarTaxi.BackColor = Color.Gold;
+        }
+
+        private void btnCargarTaxi_Click(object sender, EventArgs e)
         {
             var fAltaTaxi = new altaTaxi();
 
             fAltaTaxi.ShowDialog();
 
-           
-
-
         }
 
-        private void btnCargarOmnibus_Click(object sender, EventArgs e)
+        private void btnDetenerTaxis_Click(object sender, EventArgs e)
         {
-            var fAltaOmnibus = new altaOmnibus();
-            fAltaOmnibus.ShowDialog();
-            
+            var omnibus = new Taxis();
+
+            MessageBox.Show(omnibus.Detenerse());
+
+            btnCargarTaxi.Enabled = false;
+            btnCargarTaxi.BackColor = Color.Black;
         }
     }
 }

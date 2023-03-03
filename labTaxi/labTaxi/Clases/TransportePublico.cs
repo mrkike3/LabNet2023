@@ -6,8 +6,21 @@ using System.Threading.Tasks;
 
 namespace labTaxi.Clases
 {
-    public class TransportePublico
-    {
+    
+
+    public abstract class TransportePublico
+    { 
+     
         public int pasajeros { get; set; }
+
+
+
+        public abstract string Avanzar();
+
+
+        public abstract string Detenerse();
+       
     }
+ 
+    
 }

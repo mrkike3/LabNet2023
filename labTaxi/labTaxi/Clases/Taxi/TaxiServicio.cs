@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace labTaxi.Clases
 {
@@ -12,21 +7,9 @@ namespace labTaxi.Clases
     {
         
         private static BindingList<Taxis> _listaTaxis;
-        public static int idInc = 1;
-        public static void cargarLista()
-        {
-            
 
-
-
-            // agrega objetos a la lista
-            _listaTaxis.Add(new Taxis { taxi = idInc++, pasajeros = 3 });
-            _listaTaxis.Add(new Taxis { taxi = idInc++, pasajeros = 4 });
-            _listaTaxis.Add(new Taxis { taxi = idInc++, pasajeros = 2 });
-            _listaTaxis.Add(new Taxis { taxi = idInc++, pasajeros = 2 });
-            _listaTaxis.Add(new Taxis { taxi =  idInc++, pasajeros = 1});
-
-        }
+        public static int nroTaxis = 1;
+       
 
 
 
@@ -47,15 +30,32 @@ namespace labTaxi.Clases
 
         public static void Agregar(int pasajeros)
         {
+            if (nroTaxis > 5)
+            {
+               
+                MessageBox.Show("Cantidad Maxima de Taxis");
+
+
+                return;
+            }
+
+
+
+
+            var taxis = new Taxis();
+
+
+            MessageBox.Show(taxis.Avanzar() + $" con {pasajeros}");
+
             Taxis nuevoTaxi = new Taxis
             {
-                taxi = idInc,
+                taxi = nroTaxis,
                 pasajeros = pasajeros,
 
             };
 
             _listaTaxis.Add(nuevoTaxi);
-            idInc++;
+            nroTaxis++;
 
         }
 

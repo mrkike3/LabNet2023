@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace labTaxi.Clases
 {
@@ -10,5 +6,14 @@ namespace labTaxi.Clases
     {
         public int taxi { get; set; }
 
+        public override string Avanzar()
+        {
+            return "Taxi Avanza";
+        }
+
+        public override string Detenerse()
+        {
+            return "Taxis Detenidos";
+        }
     }
 }

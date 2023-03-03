@@ -1,4 +1,5 @@
 ﻿using labTaxi.Clases;
+using labTaxi.Clases.omnibus;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,8 @@ namespace labTaxi
     public partial class altaTaxi : Form
     {
 
-       
+        const int maxPasajeros = 4;
+
         public altaTaxi()
         { 
             InitializeComponent();
@@ -22,6 +24,13 @@ namespace labTaxi
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (nudPasajeros.Value > maxPasajeros)
+            {
+                MessageBox.Show("La Cantidad maxima de Pasajeros Permitida es 4");
+                return;
+            }
+          
+          
 
             TaxiServicio.Agregar((int)nudPasajeros.Value);
             this.Close();
