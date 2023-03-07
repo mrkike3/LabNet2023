@@ -1,12 +1,5 @@
 ﻿using Excepciones.Clases;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Excepciones
@@ -39,7 +32,7 @@ namespace Excepciones
             }
             catch (Exception ex)
             {
-                lblResultado.Text = "No ingreso nada o ingreso un numero invalido";
+                lblResultado.Text = "Seguro no ingresaste nada o le mandaste frula con una letra";
             }
            
         }

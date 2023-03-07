@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Excepciones.Clases;
+using System;
 using System.Windows.Forms;
 
 namespace Excepciones
@@ -14,11 +15,15 @@ namespace Excepciones
         {
             try
             {
-                Clases.Operaciones.DividirEnZero(nudNumero1.Value);
+                Operaciones.DividirEnZero(nudNumero1.Value);
             }
-            catch (DivideByZeroException ex)
+            catch (Exception ex)
             {
                 lblError.Text = ex.Message + " No Puede Dividir en 0";
+            }
+            finally
+            {
+                MessageBox.Show("Operacion Finalizada");
             }
 
         }

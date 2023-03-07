@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Excepciones
@@ -33,6 +26,12 @@ namespace Excepciones
         {
             var fEjercicio3 = new Ejercicio3();
             fEjercicio3.ShowDialog();
+        }
+
+        private void btnEjercicio4_Click(object sender, EventArgs e)
+        {
+            var fEjercicio4 = new Ejercicio4();
+            fEjercicio4.ShowDialog();
         }
     }
 }
