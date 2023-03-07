@@ -33,21 +33,27 @@
             // 
             // btnThrowCustomException
             // 
-            this.btnThrowCustomException.Location = new System.Drawing.Point(323, 232);
+            this.btnThrowCustomException.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnThrowCustomException.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThrowCustomException.ForeColor = System.Drawing.Color.White;
+            this.btnThrowCustomException.Location = new System.Drawing.Point(187, 120);
             this.btnThrowCustomException.Name = "btnThrowCustomException";
-            this.btnThrowCustomException.Size = new System.Drawing.Size(95, 39);
+            this.btnThrowCustomException.Size = new System.Drawing.Size(201, 100);
             this.btnThrowCustomException.TabIndex = 0;
-            this.btnThrowCustomException.Text = "button1";
-            this.btnThrowCustomException.UseVisualStyleBackColor = true;
+            this.btnThrowCustomException.Text = "Lanzar Excepcion Personalizada";
+            this.btnThrowCustomException.UseVisualStyleBackColor = false;
             this.btnThrowCustomException.Click += new System.EventHandler(this.btnThrowCustomException_Click);
             // 
             // Ejercicio4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(585, 345);
             this.Controls.Add(this.btnThrowCustomException);
+            this.MaximizeBox = false;
             this.Name = "Ejercicio4";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ejercicio4";
             this.ResumeLayout(false);
 

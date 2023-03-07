@@ -1,5 +1,6 @@
 ﻿using Excepciones.Clases;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Excepciones
@@ -19,20 +20,21 @@ namespace Excepciones
 
                 decimal numero1 = decimal.Parse(txtNumero1.Text);
                 decimal numero2 = decimal.Parse(txtNumero2.Text);
-                string resultado;
+                decimal resultado;
                 resultado = Operaciones.Dividir(numero1, numero2);
-
-                lblResultado.Text = resultado;
+                lblResultado.ForeColor = Color.White;
+                lblResultado.Text = resultado.ToString();
 
             }
             catch (DivideByZeroException ex)
             {
-
-                lblResultado.Text = " Solo chuck divide en 0 Pa " + ex.Message;
+                lblResultado.ForeColor = Color.Red;
+                lblResultado.Text = " Solo chuck divide \n  en 0 Pa " + ex.Message;
             }
             catch (Exception ex)
             {
-                lblResultado.Text = "Seguro no ingresaste nada o le mandaste frula con una letra";
+                lblResultado.ForeColor = Color.Green;
+                lblResultado.Text = "Seguro no ingresaste nada o \n le mandaste fruta con una letra";
             }
            
         }

@@ -19,7 +19,8 @@ namespace Excepciones
             }
             catch (Exception ex)
             {
-                lblError.Text = ex.Message + " No Puede Dividir en 0";
+                lblError.Text = ex.Message + " \nNo Puede Dividir en 0";
+       
             }
             finally
             {

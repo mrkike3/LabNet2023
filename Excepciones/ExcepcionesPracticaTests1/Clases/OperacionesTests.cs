@@ -18,7 +18,7 @@ namespace Practica2.Tests
             decimal nro2 = 2;
             decimal resultadoEsperado = 5;
 
-            decimal resultado = decimal.Parse(Operaciones.Dividir(nro1, nro2));
+            decimal resultado = Operaciones.Dividir(nro1, nro2);
 
             Assert.AreEqual(resultadoEsperado, resultado);
 

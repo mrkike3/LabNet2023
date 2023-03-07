@@ -10,10 +10,10 @@ namespace Excepciones.Clases
             {
                 throw new ArgumentOutOfRangeException();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
            
         }
@@ -25,10 +25,10 @@ namespace Excepciones.Clases
             {
                 throw new CustomException(" Mensaje Sobrecargado");
             }
-            catch (Exception)
+            catch (Exception ex )
             {
 
-                throw;
+                throw ex;
             }
             
         }
