@@ -21,7 +21,7 @@ namespace Excepciones
             catch (Exception ex)
             {
 
-                MessageBox.Show("Se generó una excepción de tipo " + ex.GetType().ToString(), ex.Message);
+                MessageBox.Show("Se generó una excepción de tipo " + ex.GetType().ToString() + " " + ex.Message);
             }
         }
     }
