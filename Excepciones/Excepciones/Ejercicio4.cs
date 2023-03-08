@@ -18,7 +18,7 @@ namespace Excepciones
                 Logic.ThrowCustomException();
 
             }
-            catch (Exception ex)
+            catch (CustomException ex)
             {
 
                 MessageBox.Show(ex.Message + "\nTipo de excepcion: " + ex.GetType().ToString());

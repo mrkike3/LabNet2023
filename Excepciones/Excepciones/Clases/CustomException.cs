@@ -6,5 +6,7 @@ namespace Excepciones.Clases
     {
         public CustomException(string message) : base("Mensaje Base "+ message) { }
 
+        public override string Message => "Mi mensaje de excepcion " ;
+
     }
 }

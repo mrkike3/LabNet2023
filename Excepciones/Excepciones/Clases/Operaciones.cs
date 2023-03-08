@@ -31,12 +31,9 @@ namespace Excepciones.Clases
 
 		public static decimal Dividir(decimal num1, decimal num2)
 		{
-			decimal resultado;
-			
-				 resultado = num1 / num2;
 
-				return resultado;
-		
+							return num1 / num2;
+				
 		}
 
 		
