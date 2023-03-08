@@ -29,7 +29,7 @@ namespace Excepciones
             catch (DivideByZeroException ex)
             {
                 lblResultado.ForeColor = Color.Red;
-                lblResultado.Text = " Solo chuck divide \n  en 0 Pa " + ex.Message;
+                lblResultado.Text = " Solo chuck divide \n  en 0 Pa. " + ex.Message;
             }
             catch (Exception ex)
             {
