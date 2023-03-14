@@ -65,6 +65,12 @@
     <Compile Include="Presentacion\Categoria\CategoriaConsulta.Designer.cs">
       <DependentUpon>CategoriaConsulta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Categoria\EliminarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Categoria\EliminarCategoria.Designer.cs">
+      <DependentUpon>EliminarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Categoria\ModificarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
