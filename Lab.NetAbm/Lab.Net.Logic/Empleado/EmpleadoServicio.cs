@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Lab.Net.Logic
-{
-    {
+{ 
+    public class EmpleadoServicio : IlogicABM<EmpleadoDto> { 
+    
         private NorthWindContext _northWindContext = new NorthWindContext();
 
         public EmpleadoServicio()
@@ -95,6 +96,7 @@ namespace Lab.Net.Logic
         }
 
 
-     
     }
+     
+    
 }
