@@ -9,19 +9,24 @@ using System.Threading.Tasks;
 
 namespace Lab.Net.Logic
 {
-    public class EmpleadoServicio : IlogicABM<EmpleadoDto>
     {
-        
+        private NorthWindContext _northWindContext = new NorthWindContext();
+
+        public EmpleadoServicio()
+        {
+            _northWindContext = new NorthWindContext();
+        }
+
         public IEnumerable<EmpleadoDto> GetAll(string cadenaBuscar = "")
         {
             using (var context = new NorthWindContext())
             {
                 return context.Employees
 
-                     .Where(x => x.LastName.Contains(cadenaBuscar) ||
-
+                     .Where(x => x.LastName.Contains(cadenaBuscar) || 
+                     
                                  x.FirstName.Contains(cadenaBuscar))
-
+                     
                      .Select(x => new EmpleadoDto
                      {
                          Id = x.EmployeeID,
@@ -32,6 +37,7 @@ namespace Lab.Net.Logic
             }
         }
 
+       
 
         public long Insertar(EmpleadoDto dto)
         {
@@ -78,6 +84,8 @@ namespace Lab.Net.Logic
                     .FirstOrDefault(x => x.EmployeeID == Id);
 
                 context.Employees.Remove(empleadoEliminado);
+
+
 
                 context.SaveChanges();
 
