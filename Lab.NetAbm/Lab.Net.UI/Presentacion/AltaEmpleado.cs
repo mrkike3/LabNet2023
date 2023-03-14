@@ -22,6 +22,8 @@ namespace Lab.Net.UI.Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+
+           
             var nuevoEmpleado = new EmpleadoDto
             {
                 Nombre = txtNombre.Text,
@@ -31,6 +33,9 @@ namespace Lab.Net.UI.Presentacion
             _empleadoServicio.Insertar(nuevoEmpleado);
 
             MessageBox.Show("Pecho");
+
+            
+           
 
             
         }

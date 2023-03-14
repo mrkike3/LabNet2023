@@ -19,17 +19,22 @@ namespace Lab.Net.UI.Presentacion
             InitializeComponent();
         }
 
-        public ModificarEmpleado(int id /*string tipoOperacion*/)
+        public ModificarEmpleado(int id, string nombre, string apellido)
         {
 
             InitializeComponent();
             nudEmpleadoModificar.Value = id;
             nudEmpleadoModificar.Enabled = false;
+
+            txtNombreModificar.Text = nombre;
+            txtApellidoModificar.Text = apellido;
            
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            try
+            {
             var empleadoModificar = new EmpleadoDto()
             {
                 Id = (long)nudEmpleadoModificar.Value,
@@ -40,6 +45,13 @@ namespace Lab.Net.UI.Presentacion
 
             _empleadoServicio.Modificar(empleadoModificar);
             MessageBox.Show("La modificacion pecho");
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
 
         }
     }

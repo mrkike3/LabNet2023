@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace Lab.Net.UI.Presentacion
 {
+    
     public partial class EmpleadoConsulta : Form
     {
+        private int entidadId;
         private EmpleadoServicio _empleadoServicio = new EmpleadoServicio();
         public EmpleadoConsulta()
         {
@@ -52,6 +54,8 @@ namespace Lab.Net.UI.Presentacion
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+    
+           
             var fEliminarEmpleado = new EliminarEmpleado();
             fEliminarEmpleado.ShowDialog();
             ActualizarDatos(txtEmpleadoBuscar.Text);
@@ -62,14 +66,24 @@ namespace Lab.Net.UI.Presentacion
             
 
             var idSeleccionado = int.Parse(dgvEmpleados.Rows[e.RowIndex].Cells[0].Value.ToString());
-            var fModificarEmpleado = new ModificarEmpleado(idSeleccionado);
+            var nombreSeleccionado = dgvEmpleados.Rows[e.RowIndex].Cells[1].Value.ToString();
+            var apellidoSeleccionado = dgvEmpleados.Rows[e.RowIndex].Cells[2].Value.ToString();
+            var fModificarEmpleado = new ModificarEmpleado(idSeleccionado,nombreSeleccionado,apellidoSeleccionado);
+
             fModificarEmpleado.ShowDialog();
+            ActualizarDatos(txtEmpleadoBuscar.Text);
 
         }
 
         private void txtEmpleadoBuscar_TextChanged(object sender, EventArgs e)
         {
             ActualizarDatos(txtEmpleadoBuscar.Text);
+        }
+
+        private void dgvEmpleados_SelectionChanged(object sender, EventArgs e)
+        {
+          
+
         }
     }
 }
