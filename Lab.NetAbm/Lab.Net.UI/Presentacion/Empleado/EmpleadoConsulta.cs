@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -68,6 +69,11 @@ namespace Lab.Net.UI.Presentacion
                 {
                     return;
                 }
+            }
+
+            catch(DbUpdateException)
+            {
+                MessageBox.Show("No tiene permisos para eliminar ese registro");
             }
             catch (Exception)
             {
