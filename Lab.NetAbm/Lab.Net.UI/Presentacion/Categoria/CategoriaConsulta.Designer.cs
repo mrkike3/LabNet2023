@@ -34,8 +34,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.txtCategoriaBuscar = new System.Windows.Forms.ToolStripTextBox();
             this.lblEmpleado = new System.Windows.Forms.ToolStripLabel();
-            this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +76,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(54, 44);
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // toolStripSeparator1
             // 
@@ -99,6 +100,12 @@
             this.lblEmpleado.Size = new System.Drawing.Size(96, 44);
             this.lblEmpleado.Text = "Buscar Categoria";
             // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(252, 44);
+            this.toolStripLabel1.Text = "Para Modificar haga doble click en un Registro";
+            // 
             // dgvCategorias
             // 
             this.dgvCategorias.AllowUserToAddRows = false;
@@ -113,13 +120,8 @@
             this.dgvCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCategorias.Size = new System.Drawing.Size(725, 341);
             this.dgvCategorias.TabIndex = 3;
+            this.dgvCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellClick);
             this.dgvCategorias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategorias_CellDoubleClick);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(252, 44);
-            this.toolStripLabel1.Text = "Para Modificar haga doble click en un Registro";
             // 
             // CategoriaConsulta
             // 
@@ -132,6 +134,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategoriaConsulta";
             this.Load += new System.EventHandler(this.CategoriaConsulta_Load);
+            this.Shown += new System.EventHandler(this.CategoriaConsulta_Shown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();

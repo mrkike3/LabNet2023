@@ -65,12 +65,6 @@
     <Compile Include="Presentacion\Categoria\CategoriaConsulta.Designer.cs">
       <DependentUpon>CategoriaConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Categoria\EliminarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Categoria\EliminarCategoria.Designer.cs">
-      <DependentUpon>EliminarCategoria.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\Categoria\ModificarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +76,6 @@
     </Compile>
     <Compile Include="Presentacion\Empleado\AltaEmpleado.Designer.cs">
       <DependentUpon>AltaEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\Empleado\EliminarEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Empleado\EliminarEmpleado.Designer.cs">
-      <DependentUpon>EliminarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Empleado\EmpleadoConsulta.cs">
       <SubType>Form</SubType>
@@ -120,9 +108,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Empleado\AltaEmpleado.resx">
       <DependentUpon>AltaEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Empleado\EliminarEmpleado.resx">
-      <DependentUpon>EliminarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Empleado\EmpleadoConsulta.resx">
       <DependentUpon>EmpleadoConsulta.cs</DependentUpon>
@@ -182,6 +167,8 @@
   <ItemGroup>
     <None Include="Resources\lapiz modificar.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\abmImage.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
