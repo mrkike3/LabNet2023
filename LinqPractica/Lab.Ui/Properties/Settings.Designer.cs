@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PracticaLinq.Properties
+namespace Lab.Ui.Properties
 {
 
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PracticaLinq
+namespace Lab.Ui
 {
     public partial class Form1 : Form
     {

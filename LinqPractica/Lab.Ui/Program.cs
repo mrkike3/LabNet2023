@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PracticaLinq
+namespace Lab.Ui
 {
     internal static class Program
     {

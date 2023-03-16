@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PracticaLinq")]
+[assembly: AssemblyTitle("Lab.Ui")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PracticaLinq")]
+[assembly: AssemblyProduct("Lab.Ui")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("899a3659-0db1-4980-bfe0-e36ba9437ee7")]
+[assembly: Guid("b503cd92-ba67-46bd-820e-e8b0b79bd002")]
 
 // Version information for an assembly consists of the following four values:
 //
