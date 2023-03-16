@@ -123,6 +123,7 @@ namespace Lab.Net.UI.Presentacion
             {
 
                 MessageBox.Show("Seleccione una celda que contenga un registro");
+                dgvEmpleados.CurrentCell = null;
             }
             
 

@@ -118,6 +118,7 @@ namespace Lab.Net.UI.Presentacion.Categoria
             {
 
                 MessageBox.Show("Seleccione una celda que contenga un registro");
+                dgvCategorias.CurrentCell = null;
             }
         }
     }
