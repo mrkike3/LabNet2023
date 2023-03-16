@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LinqPractica
+namespace PracticaLinq
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace LinqPractica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Principal());
+            Application.Run(new Form1());
         }
     }
 }
