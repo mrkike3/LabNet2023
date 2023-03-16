@@ -48,11 +48,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ejercicio1\Ejercicio1Dto.cs" />
+    <Compile Include="Ejercicio1\Ejercicio1Logica.cs" />
+    <Compile Include="Ejercicio2\Ejercicio2Dto.cs" />
+    <Compile Include="Ejercicio2\Ejercicio2Logica.cs" />
+    <Compile Include="Ejercicio3\Ejercicio3Dto.cs" />
+    <Compile Include="Ejercicio3\Ejercicio3Logica.cs" />
+    <Compile Include="Ejercicio4\Ejercicio4Dto.cs" />
+    <Compile Include="Ejercicio4\Ejercicio4Logica.cs" />
+    <Compile Include="Ejercicio5\Ejercicio5Dto.cs" />
+    <Compile Include="Ejercicio5\Ejercicio5Logica.cs" />
+    <Compile Include="Ejercicio7\Ejercicio7Dto.cs" />
+    <Compile Include="Ejercicio7\Ejercicio7Logica.cs" />
+    <Compile Include="InterfazLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lab.Data\Lab.Data.csproj">
+      <Project>{822002B2-1945-48DC-A99C-562BB186E8A3}</Project>
+      <Name>Lab.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lab.Entities\Lab.Entities.csproj">
+      <Project>{E6E4359E-5743-41E3-BA66-9829CBCE7309}</Project>
+      <Name>Lab.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
