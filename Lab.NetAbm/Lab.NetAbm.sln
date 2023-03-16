@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Net.Entities", "Lab.Net
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Net.Logic", "Lab.Net.Logic\Lab.Net.Logic.csproj", "{A1EE3597-5860-46F5-9942-834CD5BF7B46}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Net.LogicTests", "Lab.Net.LogicTests\Lab.Net.LogicTests.csproj", "{F993189F-FE31-4751-B986-7E730776981A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A1EE3597-5860-46F5-9942-834CD5BF7B46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1EE3597-5860-46F5-9942-834CD5BF7B46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1EE3597-5860-46F5-9942-834CD5BF7B46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F993189F-FE31-4751-B986-7E730776981A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F993189F-FE31-4751-B986-7E730776981A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F993189F-FE31-4751-B986-7E730776981A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F993189F-FE31-4751-B986-7E730776981A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

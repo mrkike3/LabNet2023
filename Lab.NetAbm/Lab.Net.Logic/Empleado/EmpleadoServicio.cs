@@ -24,6 +24,7 @@ namespace Lab.Net.Logic
             {
                 return context.Employees
 
+                     .AsNoTracking()
                      .Where(x => x.LastName.Contains(cadenaBuscar) || 
                      
                                  x.FirstName.Contains(cadenaBuscar))

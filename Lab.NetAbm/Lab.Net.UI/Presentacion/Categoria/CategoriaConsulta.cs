@@ -85,7 +85,7 @@ namespace Lab.Net.UI.Presentacion.Categoria
                 }
             }
 
-            catch (DbUpdateException ex)
+            catch (DbUpdateException)
             {
                 MessageBox.Show("No tiene permisos para eliminar ese registro");
             }
