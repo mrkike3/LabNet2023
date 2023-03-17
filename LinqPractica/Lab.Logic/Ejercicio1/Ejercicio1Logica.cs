@@ -23,7 +23,7 @@ namespace Lab.Logic
                       
                         Nombre = c.CompanyName
 
-                    }).ToList();
+                    }).Take(1).ToList();
             }
         }
     }

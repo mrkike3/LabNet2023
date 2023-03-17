@@ -11,7 +11,7 @@ namespace Lab.Logic.Ejercicio7
     {
         public IEnumerable<Ejercicio7Dto> Obtener()
         {
-            DateTime fechaOrden = new DateTime(1998, 1, 15);
+            DateTime fechaOrden = new DateTime(1997, 1, 1);
 
             using (var context = new NorthWindContext())
             {
