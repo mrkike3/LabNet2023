@@ -48,6 +48,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ejercicio10\Ejercicio10Dto.cs" />
+    <Compile Include="Ejercicio10\Ejercicio10Logica.cs" />
+    <Compile Include="Ejercicio11\Ejercicio11Dto.cs" />
+    <Compile Include="Ejercicio11\Ejercicio11Logica.cs" />
+    <Compile Include="Ejercicio12\Ejercicio12Logica.cs" />
+    <Compile Include="Ejercicio13\Ejercicio13Dto.cs" />
+    <Compile Include="Ejercicio13\Ejercicio13Logica.cs" />
     <Compile Include="Ejercicio1\Ejercicio1Dto.cs" />
     <Compile Include="Ejercicio1\Ejercicio1Logica.cs" />
     <Compile Include="Ejercicio2\Ejercicio2Dto.cs" />
@@ -56,10 +63,15 @@
     <Compile Include="Ejercicio3\Ejercicio3Logica.cs" />
     <Compile Include="Ejercicio4\Ejercicio4Dto.cs" />
     <Compile Include="Ejercicio4\Ejercicio4Logica.cs" />
-    <Compile Include="Ejercicio5\Ejercicio5Dto.cs" />
     <Compile Include="Ejercicio5\Ejercicio5Logica.cs" />
+    <Compile Include="Ejercicio6\Ejercicio6Dto.cs" />
+    <Compile Include="Ejercicio6\Ejercicio6Logica.cs" />
     <Compile Include="Ejercicio7\Ejercicio7Dto.cs" />
     <Compile Include="Ejercicio7\Ejercicio7Logica.cs" />
+    <Compile Include="Ejercicio8\Ejercicio8Dto.cs" />
+    <Compile Include="Ejercicio8\Ejercicio8Logica.cs" />
+    <Compile Include="Ejercicio9\Ejercicio9Dto.cs" />
+    <Compile Include="Ejercicio9\Ejercicio9Logica.cs" />
     <Compile Include="InterfazLogica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

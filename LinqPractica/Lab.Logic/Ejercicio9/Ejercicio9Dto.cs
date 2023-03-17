@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab.Logic.Ejercicio5
+namespace Lab.Logic.Ejercicio9
 {
-    public class Ejercicio5Dto
+    public class Ejercicio9Dto
     {
-        public int Id { get; set; }
         public string Nombre { get; set; }
     }
 }

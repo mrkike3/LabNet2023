@@ -13,12 +13,12 @@ namespace Lab.Logic.Ejercicio4
         {
             using (var context = new NorthWindContext())
             {
-                var query = from p in context.Customers
-                            where p.Region == "WA"
+                var query = from c in context.Customers
+                            where c.Region == "WA"
                             select new Ejercicio4Dto()
                             {
-                                Nombre = p.CompanyName,
-                                Region = p.Region
+                                Nombre = c.CompanyName,
+                                Region = c.Region
                             };
                 return query.ToList();
             }

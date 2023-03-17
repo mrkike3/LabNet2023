@@ -59,6 +59,30 @@
     <Compile Include="Ejercicio1.Designer.cs">
       <DependentUpon>Ejercicio1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicio10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicio10.Designer.cs">
+      <DependentUpon>Ejercicio10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicio11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicio11.Designer.cs">
+      <DependentUpon>Ejercicio11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicio12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicio12.Designer.cs">
+      <DependentUpon>Ejercicio12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicio13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicio13.Designer.cs">
+      <DependentUpon>Ejercicio13.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ejercicio2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +107,29 @@
     <Compile Include="Ejercicio5.Designer.cs">
       <DependentUpon>Ejercicio5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ejercicio6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicio6.Designer.cs">
+      <DependentUpon>Ejercicio6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ejercicio7.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ejercicio7.Designer.cs">
       <DependentUpon>Ejercicio7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicio8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicio8.Designer.cs">
+      <DependentUpon>Ejercicio8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicio9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejercicio9.Designer.cs">
+      <DependentUpon>Ejercicio9.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -99,6 +141,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ejercicio1.resx">
       <DependentUpon>Ejercicio1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicio10.resx">
+      <DependentUpon>Ejercicio10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicio11.resx">
+      <DependentUpon>Ejercicio11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicio12.resx">
+      <DependentUpon>Ejercicio12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicio13.resx">
+      <DependentUpon>Ejercicio13.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ejercicio2.resx">
       <DependentUpon>Ejercicio2.cs</DependentUpon>
@@ -112,8 +166,17 @@
     <EmbeddedResource Include="Ejercicio5.resx">
       <DependentUpon>Ejercicio5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicio6.resx">
+      <DependentUpon>Ejercicio6.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ejercicio7.resx">
       <DependentUpon>Ejercicio7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicio8.resx">
+      <DependentUpon>Ejercicio8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejercicio9.resx">
+      <DependentUpon>Ejercicio9.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -142,6 +205,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Lab.Entities\Lab.Entities.csproj">
+      <Project>{E6E4359E-5743-41E3-BA66-9829CBCE7309}</Project>
+      <Name>Lab.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lab.Logic\Lab.Logic.csproj">
       <Project>{AC4580BE-A20C-46C2-992F-1FC0907F2AC2}</Project>
       <Name>Lab.Logic</Name>
