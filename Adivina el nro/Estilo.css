@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#bodyId{
+   
+}
+
+#btnIntentar{
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #378e3a;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    
+    
+}
+#btnIntentar:hover{
+ 
+    box-shadow: 2px 2px 8px #7af27e ;
+    
+    
+}
+#btnIntentar:disabled{
+    background-color: #91f794;
+    color: grey;
+
+}
+
+#Reiniciar{
+    border-radius: 20px;
+    background-color: #246fd8;
+    background-image: linear-gradient(to bottom, #1e7bd7, #254bca);
+    color: white;
+    padding: 10px 20px;
+    font-size: 23px;
+    cursor: pointer;
+   
+}
+#Reiniciar:hover{
+  
+    box-shadow: 2px 2px 8px #f7f9fb ;
+   
+}
+
+#lblPuntaje{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: crimson;
+    pointer-events: none;
+    font-size: 23px;
+    font-weight: 600;
+   
+   
+}
+
+
+dialog{
+    margin: 10vh auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+ 
+}
+
+dialog button{
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    padding: 10px 0;
+    border: none;
+    box-shadow: 0 0 16px black;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+dialog button:hover{
+    text-shadow: 0 0 4px white;
+}
+
+ #modal{
+    background-color: limegreen;
+    border: 5px solid gold;
+
+}
+
+#modal2{
+    box-shadow: 0 0 16px rgb(234, 69, 102);
+    border: none;
+    color: white;
+    text-shadow: 0 0 4px black;
+    background: linear-gradient( #dd1818, #333333); 
+
+}
+
+
+
+dialog h2{
+
+    font-weight: 900;
+
+}
+
+.container{
+
+    display: flex;
+    margin: 3vh auto;
+    flex-direction: column;
+    width: 25%;
+    border: 5px solid #2C5364;
+    padding: 5rem;
+    border-radius: 1rem;
+    background: linear-gradient(#8360c3,#2ebf91)
+ 
+}
+
+
+
+.container h1{
+  margin: 3vh 0;
+  color: #a9df2b;
+  text-shadow: 0 0 4px black;
+  font-weight: 900;
+  font-size: 150%;
+  
+}
+.container button{
+    margin: 3vh 0;
+    border: 2px solid black;
+   
+}
+
+.container label{
+    margin: 1vh 0;
+    
+}
+
+.container input{
+    padding: 0.8rem;
+    border-radius: 1rem;
+   border: none;
+    background: none;
+    outline: 0px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+.container input:focus{
+ border: none;
+}
+.container input:active{
+ border: none;
+}
+
+::placeholder{
+    color: white;
+    font-size: 15px;
+}
+:focus::placeholder {
+    color: transparent;
+}
+ 
+
+#puntajeMaximoId{
+
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: rgb(239, 184, 4);
+    pointer-events: none;
+    font-size: 23px;
+    font-weight: 600;
+
+}

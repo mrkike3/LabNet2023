@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+<body id="bodyId">
+   
+    <div class="container" style="text-align: center;">
+  
+        <h1>Advinar el Numero! entre <br> (1 y 20) </h1>
+        <input id="txtNumeroingresado" type="number" placeholder="Ingrese su numero aqui">
+    
+        <button id="btnIntentar"> Intentar </button>
+
+   
+
+        <label id="dinamico"></label>
+ 
+        <label id="lblPuntaje">Puntaje: </label>
+    
+        <label id="puntajeMaximoId">Puntaje mas alto: </label>
+          
+        <button id="Reiniciar"> Reiniciar </button>
+   
+        
+        
+      </div>
+
+      <dialog id="modal">
+        <h2>Ganaste!</h2>
+        <h3 class="nroGenerado"></h3>
+        <button id="btnCerrar">Cerrar</button>
+      </dialog>
+
+      <dialog id="modal2">
+        <h2>Perdiste!</h2>
+        <h3 class="nroGenerado"></h3>
+        <button Id="btnCerrar2">Cerrar</button>
+      </dialog>
+    <script src="LogicaJueguito.js"></script>
+</body>
+</html>
