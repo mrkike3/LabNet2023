@@ -87,8 +87,6 @@ namespace Lab.Net.Logic
 
                 context.Employees.Remove(empleadoEliminado);
 
-
-
                 context.SaveChanges();
 
             }

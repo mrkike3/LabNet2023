@@ -1,0 +1,11 @@
+﻿@model Lab.Net.Logic.EmpleadoDto
+@{
+    ViewBag.Title = "Insertar Empleado";
+}
+
+@using (Html.BeginForm("InsertarEmpleado", "Empleados", FormMethod.Post))
+{
+    <label>Nombre:</label> @Html.TextBoxFor(e => e.Nombre)
+    <label>Apellido:</label> @Html.TextBoxFor(e => e.Apellido)
+    <input type="submit" class="btn btn-success" value="Guardar" />
+}

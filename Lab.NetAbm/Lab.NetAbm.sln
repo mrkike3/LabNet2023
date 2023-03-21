@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Net.Logic", "Lab.Net.Lo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Net.LogicTests", "Lab.Net.LogicTests\Lab.Net.LogicTests.csproj", "{F993189F-FE31-4751-B986-7E730776981A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab.Net.MVC", "Lab.Net.MVC\Lab.Net.MVC.csproj", "{459C01B1-1C77-4F3C-AAA1-D745BBED87C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F993189F-FE31-4751-B986-7E730776981A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F993189F-FE31-4751-B986-7E730776981A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F993189F-FE31-4751-B986-7E730776981A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{459C01B1-1C77-4F3C-AAA1-D745BBED87C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{459C01B1-1C77-4F3C-AAA1-D745BBED87C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{459C01B1-1C77-4F3C-AAA1-D745BBED87C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{459C01B1-1C77-4F3C-AAA1-D745BBED87C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

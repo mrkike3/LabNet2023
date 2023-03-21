@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Lab.Net.Logic.EmpleadoDto>
+@{
+    ViewBag.Title = "Empleados Page";
+}
+
+<h1>Listado de Empleados</h1>
+
+<table>
+    <tr>
+
+        <td>Nombre</td>
+        <td>Apellido</td>
+    </tr>
+    @foreach (var empleados in Model)
+    {
+        <tr>
+
+            <td>@empleados.Nombre</td>
+            <td>@empleados.Apellido</td>
+        </tr>
+    }
+
+    <li>@Html.ActionLink("Insertar Empleado", "InsertarEmpleado", "Empleados")</li>
+
+</table>
