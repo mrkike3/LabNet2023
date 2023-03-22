@@ -77,6 +77,13 @@ namespace Lab.Net.Logic
             }
         }
 
+        public Employees ObtenerPorId(int id)
+        {
+            using (var context = new NorthWindContext())
+            {
+                return context.Employees.FirstOrDefault(e => e.EmployeeID == id);
+            }
+        }
 
         public void Eliminar(decimal Id)
         {

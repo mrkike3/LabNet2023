@@ -5,7 +5,13 @@
 
 @using (Html.BeginForm("InsertarEmpleado", "Empleados", FormMethod.Post))
 {
-    <label>Nombre:</label> @Html.TextBoxFor(e => e.Nombre)
-    <label>Apellido:</label> @Html.TextBoxFor(e => e.Apellido)
+    <label>Nombre:</label>
+    @Html.TextBoxFor(e => e.Nombre)
+    @Html.ValidationMessageFor(e => e.Nombre, "", new { @class = "text-danger" })
+    <br />
+    <label>Apellido:</label>
+    @Html.TextBoxFor(e => e.Apellido)
+    @Html.ValidationMessageFor(e => e.Apellido, "", new { @class = "text-danger" })
+    <br />
     <input type="submit" class="btn btn-success" value="Guardar" />
 }

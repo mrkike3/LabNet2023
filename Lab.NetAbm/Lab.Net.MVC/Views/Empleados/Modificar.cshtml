@@ -1,0 +1,12 @@
+﻿@model Lab.Net.MVC.Models.EmpleadoView
+@{
+    ViewBag.Title = "Modificar Empleado";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(e => e.Id);
+    <label>Nombre:</label> @Html.TextBoxFor(e => e.Nombre)
+    <label>Apellido:</label> @Html.TextBoxFor(e => e.Apellido)
+    <input type="submit" class="btn btn-success" value="Guardar" />
+}

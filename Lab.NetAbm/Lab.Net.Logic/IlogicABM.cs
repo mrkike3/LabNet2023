@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.Net.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,6 @@ namespace Lab.Net.Logic
         long Insertar(T dto);
         void Modificar(T dto);
         void Eliminar(decimal Id);
+        Employees ObtenerPorId(int id);
     }
 }

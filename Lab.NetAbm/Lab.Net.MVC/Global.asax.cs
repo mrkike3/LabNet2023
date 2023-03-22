@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab.Net.MVC.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,32 @@ namespace Lab.Net.MVC
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        protected void Application_Error()
+        {
+            Exception exception = Server.GetLastError();
+            Response.Clear();
+
+            HttpException httpException = exception as HttpException;
+            RouteData routeData = new RouteData();
+
+            if (httpException != null)
+            {
+                switch (httpException.GetHttpCode())
+                {
+                    case 404:
+                        routeData.Values["controller"] = "Empleados";
+                        routeData.Values["action"] = "Index";
+                        break;
+                }
+            }
+
+        
+            Server.ClearError();
+
+            IController errorController = new EmpleadosController();
+            errorController.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
         }
     }
 }

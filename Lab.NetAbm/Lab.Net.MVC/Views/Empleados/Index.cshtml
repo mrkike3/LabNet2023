@@ -6,20 +6,29 @@
 <h1>Listado de Empleados</h1>
 
 <table>
-    <tr>
+    <thead>
 
-        <td>Nombre</td>
-        <td>Apellido</td>
-    </tr>
+        <tr>
+
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Eliminar</th>
+            <th scope="col">Modificar</th>
+        </tr>
+    </thead>
+    <tbody>
     @foreach (var empleados in Model)
     {
         <tr>
 
-            <td>@empleados.Nombre</td>
+            <th scope="row">@empleados.Nombre</th>
             <td>@empleados.Apellido</td>
+            <td>@Html.ActionLink("Eliminar", "Eliminar", new { id = empleados.Id }, new { onclick = "return confirm('Esta seguro que desea Eliminar?')" })</td>
+            <td>@Html.ActionLink("Modificar", "Modificar", new { id = empleados.Id })</td>
         </tr>
     }
+    </tbody>
+</table>
 
     <li>@Html.ActionLink("Insertar Empleado", "InsertarEmpleado", "Empleados")</li>
 
-</table>

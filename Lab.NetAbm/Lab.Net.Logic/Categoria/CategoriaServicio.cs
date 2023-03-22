@@ -79,5 +79,10 @@ namespace Lab.Net.Logic.Categoria
                 context.SaveChanges();
             }
         }
+
+        public Employees ObtenerPorId(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
