@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,10 +26,8 @@ namespace Lab.Net.Logic
                 return context.Employees
 
                      .AsNoTracking()
-                     .Where(x => x.LastName.Contains(cadenaBuscar) || 
-                     
-                                 x.FirstName.Contains(cadenaBuscar))
-                     
+                     .Where(x => (x.LastName +" " + x.FirstName).Contains(cadenaBuscar) 
+                      || (x.FirstName + " " + x.LastName).Contains(cadenaBuscar))
                      .Select(x => new EmpleadoDto
                      {
                          Id = x.EmployeeID,
