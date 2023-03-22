@@ -6,6 +6,7 @@
 @using (Html.BeginForm("InsertarModificar", "Empleados", FormMethod.Post))
 {
     @Html.HiddenFor(e => e.Id);
+ 
     <label>Nombre:</label>
     @Html.TextBoxFor(e => e.Nombre)
     @Html.ValidationMessageFor(e => e.Nombre, "", new { @class = "text-danger" })
@@ -15,4 +16,6 @@
     @Html.ValidationMessageFor(e => e.Apellido, "", new { @class = "text-danger" })
     <br />
     <input type="submit" class="btn btn-success" value="Guardar" />
+
+
 }

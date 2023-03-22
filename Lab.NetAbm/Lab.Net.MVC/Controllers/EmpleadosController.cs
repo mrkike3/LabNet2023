@@ -13,29 +13,37 @@ namespace Lab.Net.MVC.Controllers
     {
         private EmpleadoServicio _empleadoServicio  = new EmpleadoServicio();
         private EmpleadoView _empleadoVista = new EmpleadoView();
-      
-
-     
-        public ActionResult Index()
+           
+        public ActionResult Index(string cadenaBuscar ="")
         {
-            IEnumerable<EmpleadoDto> resultado = _empleadoServicio.GetAll();
+            var empleadosDtos = _empleadoServicio.GetAll(cadenaBuscar);
+            var empleadoViews = empleadosDtos.Select(x => new EmpleadoView()
+            {
+                Id = (int)x.Id,
+                Apellido = x.Apellido,
+                Nombre = x.Nombre,
+            });
 
-            return View(resultado);
+            return View(empleadoViews);
         }
-        public  ActionResult Insertar()
-        {
-            return View("InsertarModificar", new EmpleadoView());
-        }
+        
 
-        public ActionResult Modificar(int id)
+        public ActionResult InsertarModificar(int? id)
         {
-            
-            var empleadoObtenido = _empleadoServicio.ObtenerPorId(id);
+            if(id == null)
+            {
+                return View("InsertarModificar", new EmpleadoView());
+            }
+            else
+            {
+            var empleadoObtenido = _empleadoServicio.ObtenerPorId(id.Value);
             _empleadoVista.Id = empleadoObtenido.EmployeeID;
             _empleadoVista.Nombre = empleadoObtenido.FirstName;
             _empleadoVista.Apellido = empleadoObtenido.LastName;
 
             return View("InsertarModificar", _empleadoVista);
+
+            }
         }
        
 

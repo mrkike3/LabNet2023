@@ -5,6 +5,13 @@
 
 <h1>Listado de Empleados</h1>
 
+@using (Html.BeginForm("Index", "Empleados", FormMethod.Get))
+{
+    <div>
+        @Html.TextBox("cadenaBuscar", null, new { @class = "form-control", placeholder = "Buscar" })
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </div>
+}
 <table>
     <thead>
 
@@ -17,18 +24,18 @@
         </tr>
     </thead>
     <tbody>
-    @foreach (var empleados in Model)
-    {
-        <tr>
+        @foreach (var empleados in Model)
+        {
+            <tr>
 
-            <th scope="row">@empleados.Nombre</th>
-            <td>@empleados.Apellido</td>
-            <td>@Html.ActionLink("Eliminar", "Eliminar", new { id = empleados.Id }, new { onclick = "return confirm('Esta seguro que desea Eliminar?')" })</td>
-            <td>@Html.ActionLink("Modificar", "Modificar", new { id = empleados.Id })</td>
-        </tr>
-    }
+                <th scope="row">@empleados.Nombre</th>
+                <td>@empleados.Apellido</td>
+                <td>@Html.ActionLink("Eliminar", "Eliminar", new { id = empleados.Id }, new { onclick = "return confirm('Esta seguro que desea Eliminar?')" })</td>
+                <td>@Html.ActionLink("Modificar", "InsertarModificar", new { id = empleados.Id })</td>
+            </tr>
+        }
     </tbody>
 </table>
 
-    <li>@Html.ActionLink("Insertar Empleado", "Insertar", "Empleados")</li>
+<li>@Html.ActionLink("Insertar Empleado", "InsertarModificar", "Empleados")</li>
 

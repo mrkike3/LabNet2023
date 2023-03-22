@@ -19,30 +19,30 @@ namespace Lab.Net.MVC
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        //protected void Application_Error()
-        //{
-        //    Exception exception = Server.GetLastError();
-        //    Response.Clear();
+        protected void Application_Error()
+        {
+            Exception exception = Server.GetLastError();
+            Response.Clear();
 
-        //    HttpException httpException = exception as HttpException;
-        //    RouteData routeData = new RouteData();
+            HttpException httpException = exception as HttpException;
+            RouteData routeData = new RouteData();
 
-        //    if (httpException != null)
-        //    {
-        //        switch (httpException.GetHttpCode())
-        //        {
-        //            case 404:
-        //                routeData.Values["controller"] = "Empleados";
-        //                routeData.Values["action"] = "Index";
-        //                break;
-        //        }
-        //    }
+            if (httpException != null)
+            {
+                switch (httpException.GetHttpCode())
+                {
+                    case 404:
+                        routeData.Values["controller"] = "Empleados";
+                        routeData.Values["action"] = "Index";
+                        break;
+                }
+            }
 
-        
-        //    Server.ClearError();
 
-        //    IController errorController = new EmpleadosController();
-        //    errorController.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
-        //}
+            Server.ClearError();
+
+            IController errorController = new EmpleadosController();
+            errorController.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
+        }
     }
 }
