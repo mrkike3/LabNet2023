@@ -13,7 +13,7 @@ namespace Lab.Net.MVC.Controllers
     {
         private EmpleadoServicio _empleadoServicio  = new EmpleadoServicio();
         private EmpleadoView _empleadoVista = new EmpleadoView();
-        // GET: Empleados
+      
 
      
         public ActionResult Index()
@@ -22,84 +22,63 @@ namespace Lab.Net.MVC.Controllers
 
             return View(resultado);
         }
-
-        public ActionResult InsertarEmpleado()
+        public  ActionResult Insertar()
         {
-            
-
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult InsertarEmpleado(EmpleadoView view)
-        {
-
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    var nuevoEmpleado = new EmpleadoDto
-                    {
-                        Nombre = view.Nombre,
-                        Apellido = view.Apellido
-                    };
-
-                    _empleadoServicio.Insertar(nuevoEmpleado);
-                    return RedirectToAction("Index");
-
-                }
-                return View();
-
-            }
-            catch (Exception)
-            {
-
-                return RedirectToAction("Index", "Error");
-            }
-
-
-           
-        }
-
-       public ActionResult Eliminar(decimal id)
-        {
-            _empleadoServicio.Eliminar(id);
-           return RedirectToAction("Index");
+            return View("InsertarModificar", new EmpleadoView());
         }
 
         public ActionResult Modificar(int id)
         {
-            try
+            
+            var empleadoObtenido = _empleadoServicio.ObtenerPorId(id);
+            _empleadoVista.Id = empleadoObtenido.EmployeeID;
+            _empleadoVista.Nombre = empleadoObtenido.FirstName;
+            _empleadoVista.Apellido = empleadoObtenido.LastName;
+
+            return View("InsertarModificar", _empleadoVista);
+        }
+       
+
+        [HttpPost]
+        public ActionResult InsertarModificar(EmpleadoView modelo)
+        {
+            if (ModelState.IsValid)
+             {
+
+            if (modelo.Id == 0)
             {
-                var empleadoObtenido = _empleadoServicio.ObtenerPorId(id);
-                _empleadoVista.Id = empleadoObtenido.EmployeeID;
-                _empleadoVista.Nombre = empleadoObtenido.FirstName;
-                _empleadoVista.Apellido = empleadoObtenido.LastName;
                 
+                var empleadoNuevo = (new EmpleadoDto
+                {
+                    Nombre = modelo.Nombre,
+                    Apellido = modelo.Apellido
+                });
+                _empleadoServicio.Insertar(empleadoNuevo);
+                return RedirectToAction("Index");
             }
-            catch (NullReferenceException)
+            else
             {
-                return RedirectToAction("Index", "Error");
+
+                var empleadoModificado = new EmpleadoDto
+                {
+                    Id = modelo.Id,
+                    Nombre = modelo.Nombre,
+                    Apellido = modelo.Apellido
+                };
+                _empleadoServicio.Modificar(empleadoModificado);
+                return RedirectToAction("Index");
             }
-
-
-            return View(_empleadoVista);
-
+            
+             }
+            return View("InsertarModificar");
         }
 
-        [HttpPost]   
-        
-        public ActionResult Modificar(EmpleadoView view)
+        public ActionResult Eliminar(decimal id)
         {
-            var empleadoModificado = new EmpleadoDto
-            {   Id = view.Id,
-                Nombre = view.Nombre,
-                Apellido = view.Apellido
-            };
-            _empleadoServicio.Modificar(empleadoModificado);
+            _empleadoServicio.Eliminar(id);
             return RedirectToAction("Index");
         }
 
-
+      
     }
 }

@@ -1,11 +1,11 @@
 ﻿@model Lab.Net.MVC.Models.EmpleadoView
 @{
-    ViewBag.Title = "Modificar Empleado";
+    ViewBag.Title = "Insertar Empleado";
 }
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("InsertarModificar", "Empleados", FormMethod.Post))
 {
-
+    @Html.HiddenFor(e => e.Id);
     <label>Nombre:</label>
     @Html.TextBoxFor(e => e.Nombre)
     @Html.ValidationMessageFor(e => e.Nombre, "", new { @class = "text-danger" })

@@ -8,7 +8,7 @@ namespace Lab.Net.MVC.Models
 {
     public class EmpleadoView
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage ="El nombre es requerido")]
 

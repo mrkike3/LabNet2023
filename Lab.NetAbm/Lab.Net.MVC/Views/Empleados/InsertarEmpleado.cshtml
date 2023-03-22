@@ -5,6 +5,7 @@
 
 @using (Html.BeginForm("InsertarEmpleado", "Empleados", FormMethod.Post))
 {
+    @Html.HiddenFor(e => e.Id);
     <label>Nombre:</label>
     @Html.TextBoxFor(e => e.Nombre)
     @Html.ValidationMessageFor(e => e.Nombre, "", new { @class = "text-danger" })
