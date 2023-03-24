@@ -12,13 +12,15 @@ namespace Lab.Net.MVC.Models
 
         [Required]
 
-        [StringLength(20)]
+        [StringLength(10)]
+        [RegularExpression("^[a-zA-Z\\s]+$", ErrorMessage = "El nombre de empleado no acepta valores numericos ni simbolos")]
         public string Nombre { get; set; }
 
        
         [Required]
 
         [StringLength(20)]
+        [RegularExpression("^[a-zA-Z]+$", ErrorMessage = "El apellido de empleado no acepta valores numericos ni simbolos")]
         public string Apellido { get; set; }
     }
 }
