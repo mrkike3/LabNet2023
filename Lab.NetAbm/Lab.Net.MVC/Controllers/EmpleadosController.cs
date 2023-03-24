@@ -3,6 +3,7 @@ using Lab.Net.Logic;
 using Lab.Net.MVC.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -26,6 +27,8 @@ namespace Lab.Net.MVC.Controllers
 
             return View(empleadoViews);
         }
+
+     
         
 
         public ActionResult InsertarModificar(int? id)
@@ -50,7 +53,7 @@ namespace Lab.Net.MVC.Controllers
         [HttpPost]
         public ActionResult InsertarModificar(EmpleadoView modelo)
         {
-            if (ModelState.IsValid)
+              if (ModelState.IsValid)
              {
 
             if (modelo.Id == 0)
@@ -83,8 +86,17 @@ namespace Lab.Net.MVC.Controllers
 
         public ActionResult Eliminar(decimal id)
         {
-            _empleadoServicio.Eliminar(id);
-            return RedirectToAction("Index");
+            try
+            {
+                _empleadoServicio.Eliminar(id);
+                return RedirectToAction("Index");
+            }
+            catch (DbUpdateException)
+            {
+
+                return RedirectToAction("SinPermisos", "Error");
+            }
+           
         }
 
       

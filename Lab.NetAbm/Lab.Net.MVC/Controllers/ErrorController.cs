@@ -13,5 +13,10 @@ namespace Lab.Net.MVC.Controllers
         {
             return View();
         }
+
+        public ActionResult SinPermisos()
+        {
+            return View();
+        }
     }
 }

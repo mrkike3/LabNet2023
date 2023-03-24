@@ -10,13 +10,13 @@ namespace Lab.Net.MVC.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage ="El nombre es requerido")]
+        [Required]
 
         [StringLength(20)]
         public string Nombre { get; set; }
 
        
-        [Required(ErrorMessage = "El apellido es requerido")]
+        [Required]
 
         [StringLength(20)]
         public string Apellido { get; set; }
