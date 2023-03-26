@@ -129,10 +129,12 @@
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RickController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\EmpleadoView.cs" />
+    <Compile Include="Models\RickView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +178,7 @@
     <Content Include="Views\Error\Index.cshtml" />
     <Content Include="Views\Empleados\InsertarModificar.cshtml" />
     <Content Include="Views\Error\SinPermisos.cshtml" />
+    <Content Include="Views\Rick\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
