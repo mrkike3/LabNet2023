@@ -1,0 +1,46 @@
+﻿
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+
+}
+h2{
+    color:springgreen;
+}
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+   
+}
+
+.image-container img {
+    max-width: 100%;
+}
+
+.card-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-content span {
+    font-size: 18px;
+    color: #999;
+   
+}
+
+    .card-content span.status-alive {
+        color: #419af3;
+    }
+
+    .card-content span.status-dead {
+        color: #c82b50;
+    }
+
+    .card-content span.status-desconocido {
+        color: gray;
+    }
+

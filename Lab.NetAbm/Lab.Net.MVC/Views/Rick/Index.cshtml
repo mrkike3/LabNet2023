@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Lab.Net.MVC.Models.RickView>
+﻿@model  List<Lab.Net.MVC.Models.RickView>
 @{
     ViewBag.Title = "Rick Page";
 }
@@ -8,11 +8,33 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <style>
+        body {
+            background: black 
+               
+        }
+    </style>
     <title></title>
 </head>
 <body>
-    <div>
     
+    <div class="card-grid">
+        @foreach (var personaje in Model)
+        {
+            <div class="card">
+                <div class="image-container">
+                    <img src="@personaje.image" />
+                </div>
+                <div class="card-content">
+                    <h2>@personaje.name</h2>
+                    <h4>Ubicacion: @personaje.location.name</h4>
+                    <span class="@(personaje.status == "Alive" ? "status-alive" : personaje.status == "Dead" ?
+                    "status-dead" : "status-desconocido")">@personaje.status</span>
+                </div>
+            </div>
+        }
     </div>
+
+
 </body>
 </html>
