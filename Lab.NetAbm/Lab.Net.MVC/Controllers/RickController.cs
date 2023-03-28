@@ -1,18 +1,9 @@
 ﻿using Lab.Net.MVC.Models;
-
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Data.Entity.Infrastructure;
-using System.Diagnostics;
-using System.Linq;
 using System.Net.Http;
-using System.Security.Policy;
-using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using static Lab.Net.MVC.Models.RickView;
 
 namespace Lab.Net.MVC.Controllers
 {
