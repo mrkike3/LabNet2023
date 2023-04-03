@@ -32,13 +32,12 @@ namespace Lab.Net.Logic
                      {
                          Id = x.EmployeeID,
                          Nombre = x.FirstName,
-                         Apellido = x.LastName
+                         Apellido = x.LastName,
+
 
                      }).ToList();
             }
         }
-
-       
 
         public long Insertar(EmpleadoDto dto)
         {
@@ -71,6 +70,10 @@ namespace Lab.Net.Logic
 
                 empleadoModificar.FirstName = dto.Nombre;
                 empleadoModificar.LastName = dto.Apellido;
+                empleadoModificar.Country = dto.Pais;
+                empleadoModificar.City = dto.Ciudad;
+                empleadoModificar.Address = dto.Direccion;
+          
 
                 context.SaveChanges();
             }

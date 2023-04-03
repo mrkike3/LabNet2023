@@ -8,15 +8,17 @@ using System.Linq;
 using System.Reflection;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Mvc;
 
 namespace Lab.Net.WebApi.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class EmpleadosController : ApiController
     {
         private EmpleadoServicio _empleadoServicio = new EmpleadoServicio();
-        private EmpleadoDto _empleadoDto = new EmpleadoDto();
-        private EmpleadoView _empleadoView = new EmpleadoView();
+        private EmpleadoDto      _empleadoDto = new EmpleadoDto();
+        private EmpleadoView     _empleadoView = new EmpleadoView();
         // GET: Empleados
         public IHttpActionResult Get()
         {
@@ -38,11 +40,47 @@ namespace Lab.Net.WebApi.Controllers
             {
                 var empleado = _empleadoServicio.ObtenerPorId(id);
 
-                _empleadoDto.Id = empleado.EmployeeID;
-                _empleadoDto.Nombre = empleado.FirstName;
+                _empleadoDto.Id       = empleado.EmployeeID;
+                _empleadoDto.Nombre   = empleado.FirstName;               
                 _empleadoDto.Apellido = empleado.LastName;
 
+                if (empleado.Address != null)
+                {
+                    _empleadoDto.Direccion = empleado.Address;
+                }
+                else
+                {
+                    _empleadoDto.Direccion = string.Empty;
+                }
+
+                if (empleado.Country != null)
+                {
+                    _empleadoDto.Pais = empleado.Country;
+                }
+                else
+                {
+                    _empleadoDto.Pais = string.Empty; 
+                }
+
+                if (empleado.HireDate != null)
+                {
+                    _empleadoDto.FechaContratacion = (DateTime)empleado.HireDate;
+                }
+                else
+                {
+                    _empleadoDto.FechaContratacion = new DateTime(); 
+                }
+
+                if (empleado.City != null)
+                {
+                    _empleadoDto.Ciudad = empleado.City;
+                }
+                else
+                {
+                    _empleadoDto.Ciudad = string.Empty; 
+                }
               
+                
                 return Ok(_empleadoDto);
             }
             catch (Exception)
@@ -84,7 +122,11 @@ namespace Lab.Net.WebApi.Controllers
                 {
                     Id = _empleadoView.Id,
                     Nombre = _empleadoView.Nombre,
-                    Apellido = _empleadoView.Apellido
+                    Apellido = _empleadoView.Apellido,
+                    Pais = _empleadoView.Pais,
+                    Ciudad = _empleadoView.Ciudad,
+                    Direccion = _empleadoView.Direccion
+
                 };
                 _empleadoServicio.Modificar(empleadoModificado);
 
